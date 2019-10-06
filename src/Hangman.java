@@ -9,12 +9,13 @@ import javafx.scene.shape.*;
 
 public class Hangman extends Application {
     public void start(Stage primaryStage){
+        //set up stage
         Pane pane = new Pane();
         Scene scene = new Scene(pane);
         primaryStage.setHeight(500);
         primaryStage.setWidth(400);
 
-
+        //declare each part of the image
         Line pole = new Line(100, 100, 100, 350);
         Line poleTop = new Line(100, 100, 250, 100);
         Line poleBar = new Line(250, 100, 250, 125);
@@ -29,7 +30,7 @@ public class Hangman extends Application {
         poleBase.setFill(Color.WHITE);
         poleBase.setStroke(Color.BLACK);
 
-
+        //add each part of image to the pane
         pane.getChildren().add(poleTop);
         pane.getChildren().add(poleBar);
         pane.getChildren().add(leftArm);
@@ -41,7 +42,7 @@ public class Hangman extends Application {
         pane.getChildren().add(head);
         pane.getChildren().add(pole);
 
-
+        //show the stage
         primaryStage.setTitle("hangman!");
         primaryStage.setScene(scene);
         primaryStage.show();

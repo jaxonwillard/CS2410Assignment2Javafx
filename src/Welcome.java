@@ -9,11 +9,15 @@ import javafx.stage.Stage;
 public class Welcome extends Application {
 
     public void start(Stage primaryStage){
+        //Set up stage
         Pane fp = new Pane();
         Scene scene = new Scene(fp);
-        String text = "Welcome To Java ";
         primaryStage.setWidth(200);
         primaryStage.setHeight(200);
+
+
+        // Create message, set position of each character, and set rotation of each character.
+        String text = "Welcome To Java ";
         for (int i=0; i < text.length(); i++){
             Character character = text.charAt(i);
             String charToString = character.toString();
@@ -28,7 +32,7 @@ public class Welcome extends Application {
             fp.getChildren().add(letter);
 
         }
-
+        //display
         primaryStage.setScene(scene);
         primaryStage.show();
 

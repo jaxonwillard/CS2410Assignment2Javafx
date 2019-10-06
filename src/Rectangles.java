@@ -10,12 +10,14 @@ import java.util.Scanner;
 
 public class Rectangles extends Application {
     public void start(Stage primaryStage){
+        // set up stage and initailize Scanner object
         Pane pane = new Pane();
         Scene scene = new Scene(pane);
         primaryStage.setScene(scene);
         Scanner scanner = new Scanner(System.in);
         primaryStage.setWidth(500);
         primaryStage.setHeight(500);
+        // declare each rectangle characteristic
         int rectangle1X;
         int rectangle1Y;
         int rectangle1Height;
@@ -25,7 +27,7 @@ public class Rectangles extends Application {
         int rectangle2Height;
         int rectangle2Width;
 
-
+        // obtain data about rectangle 1 from user
         System.out.println("Enter rectangle1 center x coordinate: ");
         rectangle1X = scanner.nextInt();
         System.out.println("Enter rectangle1 center y coordinate: ");
@@ -37,7 +39,7 @@ public class Rectangles extends Application {
         rectangle1X = rectangle1X - (rectangle1Width / 2);
         rectangle1Y = rectangle1Y - (rectangle1Height / 2);
 
-
+        // obtain data about rectangle 2 from user
         System.out.println("Enter rectangle2 center x coordinate: ");
         rectangle2X = scanner.nextInt();
         System.out.println("Enter rectangle2 center y coordinate: ");
@@ -50,8 +52,7 @@ public class Rectangles extends Application {
         rectangle2Y = rectangle2Y - (rectangle2Height / 2);
 
 
-
-
+        // create text object condition and resolve the condition the two rectangles are in
         Text condition = new Text("The rectangles do not overlap");
         condition.setX(10);
         condition.setY(450);
@@ -75,7 +76,7 @@ public class Rectangles extends Application {
             }
         }
 
-
+        // create rectangle Objects, add rectangle Objects to pane, show primaryStage
         Rectangle rectangle1 = new Rectangle(rectangle1X, rectangle1Y, rectangle1Width, rectangle1Height );
         rectangle1.setStroke(Color.BLACK);
         rectangle1.setFill(Color.TRANSPARENT);
@@ -83,7 +84,6 @@ public class Rectangles extends Application {
         Rectangle rectangle2 = new Rectangle(rectangle2X, rectangle2Y, rectangle2Width, rectangle2Height );
         rectangle2.setStroke(Color.BLACK);
         rectangle2.setFill(Color.TRANSPARENT);
-
 
         pane.getChildren().add(rectangle2);
         pane.getChildren().add(rectangle1);
