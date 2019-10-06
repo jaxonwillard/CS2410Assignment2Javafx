@@ -6,7 +6,7 @@ import javafx.scene.shape.Line;
 import javafx.scene.text.Text;
 import javafx.stage.Stage;
 
-public class Exercise145 extends Application {
+public class Welcome extends Application {
 
     public void start(Stage primaryStage){
         Pane fp = new Pane();

@@ -7,7 +7,7 @@ import javafx.scene.paint.Color;
 import javafx.scene.shape.*;
 
 
-public class Exercise1417 extends Application {
+public class Hangman extends Application {
     public void start(Stage primaryStage){
         Pane pane = new Pane();
         Scene scene = new Scene(pane);
